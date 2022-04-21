@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.primary{
+    background-color: #eb8258;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Quantico', sans-serif;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+    transition: all .3s ease-in;
+    &:hover{
+        background-color: white;
+        color: black;
+        box-shadow: 0 1.5rem 4rem rgba(#eb8258, 0.3);
+    }
+    &:active{
+        background-color: white;
+        color: #eb8258;
+        box-shadow: 0 1.5rem 4rem rgba(#eb8258, 0);
+    }
+}
+
+.medium{
+    padding: 2rem;
+    font-size: 2rem;
+    width: 30rem;
+}
+
+.large{
+    padding: 2rem;
+    font-size: 4rem;
+    width: 40rem;
+}

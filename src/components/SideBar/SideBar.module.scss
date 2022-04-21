@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.container{
+    background-color: #545454;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 28rem;
+    padding: 5rem;
+    color: white;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.icon{
+    font-size: 3rem;
+    color: #01c0c2;
+}
+.link, .link:visited{
+    margin: 2rem;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    color: white;
+}
+
+.activeLink, .activeLink:visited{
+    margin: 2rem;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-decoration: line-through;
+    color: #eb8258;
+}
+.resumeText{
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    // text-align: center;
+    // font-family: 'Quantico', sans-serif;
+    font-weight: 100
+}
+.resumeIcon{
+    font-size: 6rem;
+    color: #01c0c2;
+}
+
+
+.logoImage{
+    width: 18rem;
+}
+@media (max-width: 800px) {
+    .container {
+        display: none;
+    }
+  }

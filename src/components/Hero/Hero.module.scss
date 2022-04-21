@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #636464;
+    text-align: left;
+    padding: 5rem;
+    font-size: 1.6rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headingText{
+    color: white;
+    font-size: 10rem;
+    font-family: 'Quantico', sans-serif;
+}
+.subheadingText{
+    color: #01c0c2;
+    font-size: 6rem;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.marginTopMedium{
+    margin-top: 3rem;
+}

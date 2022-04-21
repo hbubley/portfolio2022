@@ -1,0 +1,22 @@
+.card {
+    width: 30rem;
+    overflow: hidden;
+    background-color: white;
+    margin: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+    min-height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardImage {
+    width: 30rem;
+}
+
+.cardTitle {
+    font-size: 2rem;
+}
+.cardDetails{
+}

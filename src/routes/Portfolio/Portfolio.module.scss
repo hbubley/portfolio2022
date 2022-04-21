@@ -1,0 +1,36 @@
+.container{
+    background-color: #636464;
+    width: 100%;
+    padding: 5rem;
+}
+
+.headingText{
+    color: white;
+    font-size: 10rem;
+    font-family: 'Quantico', sans-serif;
+    text-align: left;
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projectContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }

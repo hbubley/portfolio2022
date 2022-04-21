@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300&display=swap');
+
+html{
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+@media (max-width: 1440px) {
+  html, body {
+  overflow-x: hidden;
+  font-size: 8px;
+  }
+}
+@media (max-width: 1042px) {
+  html, body {
+  overflow-x: hidden;
+  font-size: 7px;
+  }
+}
+@media (max-width: 800px) {
+  html, body {
+  overflow-x: hidden;
+  font-size: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  html, body {
+  overflow-x: hidden;
+  font-size: 4px;
+  }
+}
+
