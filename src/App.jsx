@@ -11,6 +11,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, onValue, child, get } from "firebase/database";
 import { FIREBASE_CONFIG } from './utility/constants';
 import { useEffect, useState } from 'react';
+import Project from './routes/Project/Project';
 
 function App() {
   const [projects, setProjects] = useState([])
@@ -20,8 +21,8 @@ function App() {
   const analytics = getAnalytics(app);
   const db = getDatabase(app);
   const dbRef = ref(db, '/1-evOf81p1DnmQ7OBV3d-aeA8bbpxNpEPSY6Ie5gzTJ4')
-  
-  useEffect(() => {    
+
+  useEffect(() => {
     onValue(dbRef, (snapshot) => {
       const data = snapshot.val();
       setProjects(data.Sheet1)
@@ -33,9 +34,12 @@ function App() {
         <SideBar />
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio data={projects} />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          <Route path="portfolio">
+            <Route path="" element={<Portfolio data={projects} />} />
+            <Route path=":id" element={<Project />} />
+          </Route>
+          <Route path="contact" element={<Contact />} />
         </Routes>
       </div>
       <Footer />
