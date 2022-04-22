@@ -1,12 +1,22 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-
-const Project = () => {
-    const param = useParams()
-    console.log("🚀 ~ file: Project.jsx ~ line 6 ~ Project ~ param", param)
-
+import { Link, useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import styles from './Project.module.scss'
+import Card from '../../components/Card/Card';
+const Project = ({ data }) => {
+    const { id } = useParams();
+    const [project, setProject] = useState()
+    useEffect(() => {
+        const _project = data.find((d) => `${d.id}` === `${id}`)
+        setProject(_project)
+        console.log("🚀 ~ file: Project.jsx ~ line 8 ~ Project ~ project", project, data, id)
+    }, [data, id])
     return (
-        <div></div>
+        <div className={styles.container}>
+            <p className={styles.headingText}>{project?.title}</p>
+            <div>
+            </div>
+        </div>
     )
 }
 
