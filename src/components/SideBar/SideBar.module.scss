@@ -19,6 +19,11 @@
 .icon{
     font-size: 3rem;
     color: #01c0c2;
+    transition: all .5s;
+    &:hover{
+        color: white;
+        box-shadow: 0 1.5rem 4rem rgba(#01c0c2, 0.5);
+    }
 }
 .link, .link:visited{
     margin: 2rem;
@@ -46,6 +51,11 @@
 .resumeIcon{
     font-size: 6rem;
     color: #01c0c2;
+    transition: all .5s;
+    &:hover{
+        color: white;
+        box-shadow: 0 1.5rem 4rem rgba(#01c0c2, 0.5);
+    }
 }
 
 
