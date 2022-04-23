@@ -37,7 +37,9 @@ const SideBar = () => {
       </div>
       <div>
         <div className={styles.resumeContainer}>
-          <FontAwesomeIcon className={styles.resumeIcon} icon={faFileDownload} />
+          <a href="https://docs.google.com/document/d/e/2PACX-1vRsz58Pr60meg4Pb3RcnYhMJ-UOiCxWmk1BkizqdWZ8RREzmJl2Jkm_X8NTBWXAgm36lM3ZPGcibnV5/pub" referrerPolicy='no-referrer' target="blank">
+            <FontAwesomeIcon className={styles.resumeIcon} icon={faFileDownload} />
+          </a>
           <p className={styles.resumeText}>Resume</p>
         </div>
         <div className={styles.icons}>
