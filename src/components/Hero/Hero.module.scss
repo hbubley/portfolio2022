@@ -17,6 +17,7 @@
     color: white;
     font-size: 10rem;
     font-family: 'Quantico', sans-serif;
+    animation: fadeIn .5s;
 }
 .subheadingText{
     color: #01c0c2;
@@ -24,8 +25,19 @@
     padding: 1.5rem;
     text-transform: uppercase;
     font-weight: 100;
+    animation: fadeIn .5s;
 }
 
 .marginTopMedium{
     margin-top: 3rem;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

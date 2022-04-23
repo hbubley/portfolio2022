@@ -6,6 +6,7 @@
     font-family: 'Quantico', sans-serif;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
     transition: all .3s ease-in;
+    animation: fadeIn .5s;
     &:hover{
         background-color: white;
         color: black;
@@ -33,3 +34,12 @@
     font-size: 4rem;
     width: 40rem;
 }
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

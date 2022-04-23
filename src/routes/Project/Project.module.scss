@@ -10,3 +10,38 @@
     font-family: 'Quantico', sans-serif;
     text-align: left;
 }
+
+.image{
+    height: 30rem;
+    width: 30rem;
+    border-radius: 5px;
+    background-size: cover;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+    background-position: center;
+}
+.descriptionContainer{
+    padding: 2rem;
+    margin: 3rem;
+    border: 1px solid #eb8258;
+}
+.description{
+    font-size: 2rem;
+    color: white;
+}
+.imageInFocus{
+    width: 60rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.imageInFocusCaption{
+    font-size: 1.6rem;
+    color: white;
+}
+.imagesContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem;
+}
