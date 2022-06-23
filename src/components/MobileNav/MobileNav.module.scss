@@ -1,0 +1,24 @@
+.container {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 100px;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 5rem;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+    }
+    .icon{
+        font-size: 6rem;
+        color: #eb8258;
+    }
+  }

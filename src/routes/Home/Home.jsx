@@ -4,7 +4,10 @@ import SideBar from '../../components/SideBar/SideBar'
 import styles from './Home.module.scss'
 const Home = () => {
   return (
-    <div><Hero /></div>
+    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+      <Hero />
+      <div className={styles.imageContainer}></div>
+    </div>
   )
 }
 

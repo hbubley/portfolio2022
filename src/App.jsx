@@ -12,6 +12,8 @@ import { getDatabase, ref, onValue, child, get } from "firebase/database";
 import { FIREBASE_CONFIG } from './utility/constants';
 import { useEffect, useState } from 'react';
 import Project from './routes/Project/Project';
+import MobileNav from './components/MobileNav/MobileNav';
+import Home from './routes/Home/Home';
 
 function App() {
   const [projects, setProjects] = useState([])
@@ -32,17 +34,19 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <SideBar />
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="about" element={<About />} />
-          <Route path="portfolio">
-            <Route path="" element={<Portfolio data={projects} />} />
-            <Route path=":id" element={<Project data={projects} />} />
-          </Route>
-          <Route path="contact" element={<Contact />} />
-        </Routes>
+        <MobileNav />
+        <div style={{ overflowY: "scroll", height: "100vh", backgroundColor: "#0c0c0c", width: "100%" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="portfolio">
+              <Route path="" element={<Portfolio data={projects} />} />
+              <Route path=":id" element={<Project data={projects} />} />
+            </Route>
+            <Route path="contact" element={<Contact />} />
+          </Routes>
+        </div>
       </div>
-      <Footer />
     </BrowserRouter>
   )
 }
