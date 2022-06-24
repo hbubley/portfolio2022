@@ -1,8 +1,8 @@
-.container{
+.formContainer {
     padding: 5rem;
 }
 
-.headingText{
+.headingText {
     color: white;
     font-size: 10rem;
     font-family: 'Quantico', sans-serif;
@@ -10,18 +10,20 @@
     animation: fadeIn 1s;
 }
 
-.textLeft{
+.textLeft {
     text-align: left;
 }
 
-.form{
+.form {
     margin-top: 5rem;
     text-align: left;
-    &Group:not(:last-child){
+
+    &Group:not(:last-child) {
         margin-bottom: 2rem;
     }
-    &Input{
-        font-size: 1.5rem;
+
+    &Input {
+        font-size: 2rem;
         padding: 1.5rem 2rem;
         border-radius: 2px;
         background-color: white;
@@ -32,13 +34,71 @@
         display: block;
 
     }
-    &Input:focus{
+
+    &Input:focus {
         outline: none;
         box-shadow: 0 1rem 2rem rgba(#eb8258, .2);
         border-bottom: 3px solid #eb8258;
     }
-    &Label{
+
+    &Label {
         color: white;
+    }
+}
+
+.imageContainer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .formInput{
+        font-size: 3rem;
+    }
+    .imageContainer {
+        display: block;
+        background-image: url(https://images.unsplash.com/photo-1574012716378-0ca6f4c18c08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2017&q=80);
+        opacity: 0.6;
+        height: 40vh;
+        width: 100%;
+        background-position: center;
+        clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+        position: fixed;
+        bottom: 0;
+    }
+}
+@media (max-width: 425px) {
+    .formInput{
+        font-size: 3rem;
+    }
+    .imageContainer {
+        display: block;
+        background-image: url(https://images.unsplash.com/photo-1574012716378-0ca6f4c18c08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2017&q=80);
+        opacity: 0.6;
+        height: 30vh;
+        width: 100%;
+        background-position: center;
+        clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+        position: fixed;
+        bottom: 0;
+    }
+}
+@media (max-width: 375px) {
+    .formInput{
+        font-size: 3rem;
+    }
+    .imageContainer {
+        display: block;
+        background-image: url(https://images.unsplash.com/photo-1574012716378-0ca6f4c18c08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2017&q=80);
+        opacity: 0.6;
+        height: 50vh;
+        width: 100%;
+        background-position: center;
+        clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+        position: fixed;
+        bottom: 0;
     }
 }
 
@@ -46,6 +106,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
