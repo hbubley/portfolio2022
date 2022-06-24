@@ -27,7 +27,30 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-evenly;
         width: 100%;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0; 
+        background-color: white;
+        width: 100%; 
+        font-size: 6rem; 
+        z-index: 11;
+    }
+    .link, .link:visited{
+        margin: 2rem;
+        font-weight: 100;
+        text-decoration: none;
+        color: black;
+    }
+
+    .activeLink, .activeLink:visited{
+        margin: 2rem;
+        font-weight: 100;
+        text-decoration: line-through;
+        color: #eb8258;
+        font-size: 6.5rem;
     }
 
     .icon {

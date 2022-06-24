@@ -7,7 +7,7 @@ import logoImage from '../../img/HB-LOGO.png'
 import { Link, useLocation } from 'react-router-dom'
 const SideBar = () => {
   const { pathname } = useLocation();
-  console.log(pathname)
+
   return (
     <>
       <div className={styles.container}>

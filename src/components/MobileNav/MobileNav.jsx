@@ -2,10 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import styles from './MobileNav.module.scss'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 const MobileNav = () => {
-    let navigate = useNavigate()
+    let navigate = useNavigate();
+    const { pathname } = useLocation();
     const [open, setOpen] = useState(false);
     const onNavigate = (to) => {
         setOpen(false)
@@ -17,11 +18,11 @@ const MobileNav = () => {
                 <FontAwesomeIcon icon={faBars} className={styles.icon} onClick={() => setOpen(!open)} />
             </div>
             {
-                open && <div className={styles.menu} style={{position: 'fixed', right: '0', top: "7%", backgroundColor: "white", width: '100%', fontSize: '4rem', zIndex: '11'}}>
-                    <Link to="/" onClick={() => onNavigate("/")}>Home</Link>
-                    <Link to="/about" onClick={() => onNavigate("/about")}>About</Link>
-                    <Link to="/portfolio" onClick={() => onNavigate("/portfolio")}>Portfolio</Link>
-                    <Link to="/contact" onClick={() => onNavigate("/contact")}>Contact</Link>
+                open && <div className={styles.menu}>
+                    <Link className={pathname === "/" ? styles.activeLink : styles.link} to="/" onClick={() => onNavigate("/")}>Home</Link>
+                    <Link className={pathname === "/about" ? styles.activeLink : styles.link} to="/about" onClick={() => onNavigate("/about")}>About</Link>
+                    <Link className={pathname === "/portfolio" ? styles.activeLink : styles.link} to="/portfolio" onClick={() => onNavigate("/portfolio")}>Portfolio</Link>
+                    <Link className={pathname === "/contact" ? styles.activeLink : styles.link} to="/contact" onClick={() => onNavigate("/contact")}>Contact</Link>
                 </div>
             }
         </>
