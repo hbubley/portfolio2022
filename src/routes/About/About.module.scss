@@ -1,4 +1,4 @@
-.container{
+.container {
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -6,7 +6,7 @@
     padding: 5rem;
 }
 
-.bioPic{
+.bioPic {
     max-width: 30rem;
     border-radius: 200px;
     animation: fadeIn 1s;
@@ -15,7 +15,7 @@
     margin-left: 5rem;
 }
 
-.headingText{
+.headingText {
     color: white;
     font-size: 10rem;
     font-family: 'Quantico', sans-serif;
@@ -23,21 +23,23 @@
     animation: fadeIn 1s;
 }
 
-.borderBottom{
+.borderBottom {
     border-bottom: 1px solid #eb8258;
 }
-.borderTop{
+
+.borderTop {
     border-top: 1px solid #eb8258;
 }
 
-.rightCol{
+.rightCol {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     animation: fadeIn 1s;
 }
-.leftCol{
+
+.leftCol {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -45,34 +47,38 @@
     width: 40%;
 }
 
-.bioText{
+.bioText {
     line-height: 1.5;
     font-size: 2rem;
     text-align: left;
     padding: 20px;
     color: white;
 }
-.marginTopMedium{
+
+.marginTopMedium {
     margin-top: 3rem;
 }
-.marginBottomMedium{
+
+.marginBottomMedium {
     margin-bottom: 3rem;
 }
 
-.text{
+.text {
     margin-bottom: 2rem;
 }
 
-.textRight{
+.textRight {
     text-align: right;
 }
-.textLeft{
+
+.textLeft {
     text-align: left;
 }
 
-.skillsContainer{
+.skillsContainer {
     text-align: left;
-    li{
+
+    li {
         font-size: 2rem;
         color: white;
         margin: 1rem;
@@ -90,15 +96,26 @@
         justify-content: center;
         align-items: center;
     }
-    .leftCol{
+
+    .leftCol {
         flex-direction: column-reverse;
     }
-  }
+    .text{
+        font-size: 3.5rem;
+    }
+
+    .skillsContainer {
+        li {
+            font-size: 3.5rem;
+        }
+    }
+}
 
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }

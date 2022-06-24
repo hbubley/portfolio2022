@@ -7,7 +7,7 @@ const Contact = () => {
     <div className={styles.container}>
       <div className={styles.formContainer}>
         <p className={`${styles.headingText} ${styles.textLeft}`}>Let's connect</p>
-        <form className={styles.form}>
+        <form className={styles.form} netlify>
           <div className={styles.formGroup}>
             <input className={styles.formInput} name="name" id="name" placeholder='Full Name' />
             <label className={styles.formLabel} for="name">First Name</label>
@@ -20,7 +20,7 @@ const Contact = () => {
             <textarea className={styles.formInput} name="message" id="message" placeholder='Message' />
             <label className={styles.formLabel} for="message">Message</label>
           </div>
-          <Button text={"Submit"} />
+          <Button text={"Submit"} type={"submit"} />
         </form>
       </div>
       <div className={styles.imageContainer}></div>

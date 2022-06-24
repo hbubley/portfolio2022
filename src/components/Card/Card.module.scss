@@ -18,13 +18,28 @@
 .cardTitle {
     font-size: 2rem;
 }
-.cardDetails{
-}
-.builtIn{
+
+
+.builtIn {
     font-size: 1.6rem;
     font-style: italic;
 }
 
-.link{
+.link {
     padding: 1rem;
+}
+
+@media (max-width: 800px) {
+    .card {
+        width: 60rem;
+    }
+    .cardImage{
+        width: 60rem;
+    }
+    .cardTitle{
+        font-size: 3.5rem;
+    }
+    .builtIn{
+        font-size: 3rem;
+    }
 }
