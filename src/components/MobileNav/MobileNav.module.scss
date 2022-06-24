@@ -2,6 +2,10 @@
     display: none;
 }
 
+.menu {
+    display: none;
+}
+
 @media (max-width: 800px) {
     .container {
         display: flex;
@@ -16,9 +20,18 @@
         right: 0;
         margin: 5rem;
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+        z-index: 15;
     }
-    .icon{
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .icon {
         font-size: 6rem;
         color: #eb8258;
     }
-  }
+}

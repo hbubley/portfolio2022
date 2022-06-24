@@ -8,8 +8,14 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 425px) {
     .imageContainer {
         display: none;
+    }
+  }
+@media (max-width: 1200px) {
+    .imageContainer {
+        width: 30%;
+        background-image: url(https://images.unsplash.com/photo-1574012716378-0ca6f4c18c08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2017&q=80);
     }
   }

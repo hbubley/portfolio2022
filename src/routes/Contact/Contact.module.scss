@@ -1,6 +1,4 @@
 .container{
-    background-color: #636464;
-    width: 100%;
     padding: 5rem;
 }
 
@@ -10,6 +8,38 @@
     font-family: 'Quantico', sans-serif;
     padding: 1rem;
     animation: fadeIn 1s;
+}
+
+.textLeft{
+    text-align: left;
+}
+
+.form{
+    margin-top: 5rem;
+    text-align: left;
+    &Group:not(:last-child){
+        margin-bottom: 2rem;
+    }
+    &Input{
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: white;
+        border: none;
+        font-family: inherit;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+
+    }
+    &Input:focus{
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(#eb8258, .2);
+        border-bottom: 3px solid #eb8258;
+    }
+    &Label{
+        color: white;
+    }
 }
 
 @keyframes fadeIn {
