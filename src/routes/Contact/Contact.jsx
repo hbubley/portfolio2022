@@ -7,7 +7,7 @@ const Contact = () => {
     <div className={styles.container}>
       <div className={styles.formContainer}>
         <p className={`${styles.headingText} ${styles.textLeft}`}>Let's connect</p>
-        <form className={styles.form} netlify>
+        <form className={styles.form} name="contact" method="POST" data-netlify="true">
           <div className={styles.formGroup}>
             <input className={styles.formInput} name="name" id="name" placeholder='Full Name' />
             <label className={styles.formLabel} for="name">First Name</label>
