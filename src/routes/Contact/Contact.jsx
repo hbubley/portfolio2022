@@ -1,14 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import styles from './Contact.module.scss'
 
 const Contact = () => {
   const navigate = useNavigate();
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState({name: "", email: "", message: ""});
 
   const onChange = (e) => {
-    setForm({...form, [e.taget.name]: e.target.value})
+    setForm({...form, [e.target.name]: e.target.value})
   }
   const encode = (data) => {
     return Object.keys(data)
@@ -35,15 +35,15 @@ const Contact = () => {
         <form onSubmit={(e) => handleSubmit(e)} className={styles.form} name="contact" id="contact" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
           <input type="hidden" name="contact" value="contact" />
           <div className={styles.formGroup}>
-            <input className={styles.formInput} name="name" id="name" onChange={onChange} placeholder='Full Name' />
+            <input className={styles.formInput} name="name" id="name" onChange={onChange} placeholder='Full Name' value={form.name} />
             <label className={styles.formLabel} for="name">First Name</label>
           </div>
           <div className={styles.formGroup}>
-            <input className={styles.formInput} name="email" id="email" onChange={onChange} placeholder='Email Address' />
+            <input className={styles.formInput} name="email" id="email" onChange={onChange} placeholder='Email Address' value={form.email} />
             <label className={styles.formLabel} for="email">Email Address</label>
           </div>
           <div className={styles.formGroup}>
-            <textarea className={styles.formInput} name="message" id="message" onChange={onChange} placeholder='Message' />
+            <textarea className={styles.formInput} name="message" id="message" onChange={onChange} placeholder='Message' value={form.message} />
             <label className={styles.formLabel} for="message">Message</label>
           </div>
           <Button text={"Submit"} type={"submit"} />
