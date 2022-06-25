@@ -38,12 +38,12 @@ function App() {
         <div style={{ overflowY: "scroll", height: "100vh", backgroundColor: "#0c0c0c", width: "100%" }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="portfolio">
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio">
               <Route path="" element={<Portfolio data={projects} />} />
               <Route path=":id" element={<Project data={projects} />} />
             </Route>
-            <Route path="contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>
