@@ -5,6 +5,11 @@ import styles from './Contact.module.scss'
 
 const Contact = () => {
   const navigate = useNavigate();
+  const [form, setForm] = useState({});
+
+  const onChange = (e) => {
+    setForm({...form, [e.taget.name]: e.target.value})
+  }
   const encode = (data) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -15,7 +20,7 @@ const Contact = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", "name": "test" })
+      body: encode({ "form-name": "contact", ...form })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -28,17 +33,17 @@ const Contact = () => {
       <div className={styles.formContainer}>
         <p className={`${styles.headingText} ${styles.textLeft}`}>Let's connect</p>
         <form onSubmit={(e) => handleSubmit(e)} className={styles.form} name="contact" id="contact" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="contact" value="contact" />
           <div className={styles.formGroup}>
-            <input className={styles.formInput} name="name" id="name" placeholder='Full Name' />
+            <input className={styles.formInput} name="name" id="name" onChange={onChange} placeholder='Full Name' />
             <label className={styles.formLabel} for="name">First Name</label>
           </div>
           <div className={styles.formGroup}>
-            <input className={styles.formInput} name="email" id="email" placeholder='Email Address' />
+            <input className={styles.formInput} name="email" id="email" onChange={onChange} placeholder='Email Address' />
             <label className={styles.formLabel} for="email">Email Address</label>
           </div>
           <div className={styles.formGroup}>
-            <textarea className={styles.formInput} name="message" id="message" placeholder='Message' />
+            <textarea className={styles.formInput} name="message" id="message" onChange={onChange} placeholder='Message' />
             <label className={styles.formLabel} for="message">Message</label>
           </div>
           <Button text={"Submit"} type={"submit"} />
