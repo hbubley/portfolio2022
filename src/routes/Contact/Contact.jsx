@@ -4,7 +4,7 @@ import Button from '../../components/Button/Button'
 import styles from './Contact.module.scss'
 
 const Contact = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const encode = (data) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -15,7 +15,7 @@ const Contact = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", "text": "test" })
+      body: encode({ "form-name": "contact", "name": "test" })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
