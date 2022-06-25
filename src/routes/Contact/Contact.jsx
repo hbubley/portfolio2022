@@ -1,14 +1,14 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import styles from './Contact.module.scss'
 
 const Contact = () => {
   const navigate = useNavigate();
-  const [form, setForm] = useState({name: "", email: "", message: ""});
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const onChange = (e) => {
-    setForm({...form, [e.target.name]: e.target.value})
+    setForm({ ...form, [e.target.name]: e.target.value })
   }
   const encode = (data) => {
     return Object.keys(data)
@@ -22,7 +22,10 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...form })
     })
-      .then(() => alert("Success!"))
+      .then(() => {
+        alert("Success!")
+        setForm({name: "", email: "", message: ""})
+      })
       .catch(error => alert(error));
 
     e.preventDefault();
