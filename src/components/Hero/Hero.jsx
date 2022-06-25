@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import styles from './Hero.module.scss'
 const Hero = () => {
@@ -9,7 +10,9 @@ const Hero = () => {
       <p className={styles.headingText}>Web Developer</p>
       <p className={styles.subheadingText}>Front-end developer</p>
       <div className={`${styles.marginTopMedium} ${styles.buttonContainer}`}>
-        <Button variant={'primary'} size={'large'} text={"Let's Talk"} />
+        <Link to="/contact">
+          <Button variant={'primary'} size={'large'} text={"Let's Talk"} />
+        </Link>
       </div>
     </div>
   )
