@@ -8,7 +8,7 @@ import Portfolio from './routes/Portfolio/Portfolio';
 import Contact from './routes/Contact/Contact';
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, onValue, child, get } from "firebase/database";
+import { getDatabase, ref, onValue } from "firebase/database";
 import { FIREBASE_CONFIG } from './utility/constants';
 import { useEffect, useState } from 'react';
 import Project from './routes/Project/Project';
