@@ -18,7 +18,6 @@ import Home from './routes/Home/Home';
 function App() {
   const [projects, setProjects] = useState([])
   const firebaseConfig = FIREBASE_CONFIG;
-
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const db = getDatabase(app);

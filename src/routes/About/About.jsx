@@ -1,7 +1,12 @@
 import React from 'react'
 import styles from './About.module.scss'
 import BioPic from '../../img/HB-BIOPIC.png'
+import { getAnalytics, logEvent } from "firebase/analytics";
 const About = () => {
+  const analytics = getAnalytics();
+  logEvent(analytics, 'screen_view', {
+    firebase_screen: "AboutPage",
+  });
   const skills = ["React, React Native", "Javascript, html, s/css", "Express, Mongo", "Django, Python", "Cypress", "Github"]
   return (
     <div className={styles.container}>

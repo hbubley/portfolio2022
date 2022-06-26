@@ -1,8 +1,12 @@
 import React from 'react'
 import Card from '../../components/Card/Card';
 import styles from './Portfolio.module.scss';
+import { getAnalytics, logEvent } from "firebase/analytics";
 const Portfolio = ({ data }) => {
-  console.log(data)
+  const analytics = getAnalytics();
+  logEvent(analytics, 'screen_view', {
+    firebase_screen: "PortfolioPage",
+  });
   const displayData = data ? data : new Array(10)
   return (
     <div className={styles.container}>

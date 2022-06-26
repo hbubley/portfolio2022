@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import styles from './Contact.module.scss'
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const Contact = () => {
-  const navigate = useNavigate();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const analytics = getAnalytics();
+  logEvent(analytics, 'screen_view', {
+    firebase_screen: "ContactPage",
+  });
 
   const onChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -15,7 +18,6 @@ const Contact = () => {
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
   }
-
   const handleSubmit = e => {
     fetch("/", {
       method: "POST",
@@ -24,7 +26,7 @@ const Contact = () => {
     })
       .then(() => {
         alert("Success!")
-        setForm({name: "", email: "", message: ""})
+        setForm({ name: "", email: "", message: "" })
       })
       .catch(error => alert(error));
 
