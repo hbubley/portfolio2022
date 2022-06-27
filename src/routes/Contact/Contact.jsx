@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
-        <p className={`${styles.headingText} ${styles.textLeft}`}>Let's connect</p>
+        <p className={`${styles.headingText} ${styles.textLeft}`}>Let's Connect</p>
         <form onSubmit={(e) => handleSubmit(e)} className={styles.form} name="contact" id="contact" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
           <input type="hidden" name="contact" value="contact" />
           <div className={styles.formGroup}>
