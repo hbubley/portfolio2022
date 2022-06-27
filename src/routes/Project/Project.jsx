@@ -32,7 +32,7 @@ const Project = ({ data }) => {
             </div>
             <div className={styles.imagesContainer}>
                 {images?.length > 0 && images.map((image) => {
-                    return <div className={styles.image} onClick={() => setImageInFocus(image)} style={{ backgroundImage: `url(${image.src})` }} ></div>
+                    return <div className={imageInFocus.src === image.src ? `${styles.image} ${styles.selectedImage}` : styles.image} onClick={() => setImageInFocus(image)} style={{ backgroundImage: `url(${image.src})` }} ></div>
                 })}
             </div>
         </div >

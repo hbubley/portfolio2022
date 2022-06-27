@@ -1,5 +1,5 @@
 .card {
-    width: 30rem;
+    width: 50rem;
     overflow: hidden;
     background-color: white;
     margin: 3rem;
@@ -9,19 +9,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #01c0c2;
 }
 
 .cardImage {
-    width: 30rem;
+    width: 50rem;
 }
 
 .cardTitle {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 
 .builtIn {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     font-style: italic;
 }
 
@@ -31,10 +34,10 @@
 
 @media (max-width: 800px) {
     .card {
-        width: 60rem;
+        width: 70rem;
     }
     .cardImage{
-        width: 60rem;
+        width: 70rem;
     }
     .cardTitle{
         font-size: 3.5rem;
